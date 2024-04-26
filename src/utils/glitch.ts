@@ -15,7 +15,7 @@ export const glitch = (element: HTMLElement | null) => {
   interval = setInterval(() => {
     element.innerText = element.innerText
       .split("")
-      .map((letter, index) => {
+      .map((_letter, index) => {
         if (index < iteration) return textValue[index];
 
         return letters[Math.floor(Math.random() * 26)];
