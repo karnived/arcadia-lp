@@ -26,7 +26,7 @@ const formSchema = z
 
 type FormSchemaValues = z.infer<typeof formSchema>;
 
-const RegisterModal = forwardRef<HTMLDivElement>((props, ref) => {
+const RegisterModal = forwardRef<HTMLDivElement>((_props, ref) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const {
     handleSubmit,
