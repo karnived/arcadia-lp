@@ -11,9 +11,11 @@ type BoxProps = {
 
 const Box = ({ label, value }: BoxProps) => {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center bg-purple-700 rounded-xl">
-      <span className="text-3xl">{value}</span>
-      <span className="text-sm">{label}</span>
+    <div className="flex-1 flex flex-col items-center justify-center countdown-box-container">
+      <span className="text-sm mb-2 uppercase text-[13px]">{label}</span>
+      <div className="w-[60px] h-[60px] rounded-xl flex justify-center countdown-box">
+        <span className="text-[40px] countdown-value">{value}</span>
+      </div>
     </div>
   );
 };
@@ -46,9 +48,9 @@ export default function Countdown({ targetDate }: CountdownProps) {
 
   return (
     <section id="countdown">
-      <div className="fixed top-6 left-0 right-0 px-2 w-full z-10 text-white max-w-[400px] mx-auto">
+      <div className="px-2 w-full z-10 text-white max-w-[400px] mx-auto">
         <time
-          className="w-full flex space-x-4 h-20"
+          className="w-full flex space-x-6"
           dateTime={targetDate.toLocaleString()}
           ref={listRef}
         >

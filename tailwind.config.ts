@@ -7,7 +7,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        arcade: ["var(--font-arcade)"],
+        headline: ["var(--font-headline)"],
+        enter: ["var(--font-enter)"],
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui()],

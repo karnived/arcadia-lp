@@ -1,6 +1,6 @@
-import { Card } from "@nextui-org/react";
-import ScrollReveal from "scrollreveal";
 import { useEffect, useRef } from "react";
+import { Divider } from "@nextui-org/react";
+import ScrollReveal from "scrollreveal";
 import { slideUp } from "../utils/animations";
 
 const team = [
@@ -42,30 +42,30 @@ const Footer = () => {
     if (listRef.current) {
       const items = listRef.current.childNodes as NodeListOf<HTMLElement>;
       items.forEach((item, idx) =>
-        ScrollReveal().reveal(item, { ...slideUp, delay: idx * 150 })
+        ScrollReveal().reveal(item, { ...slideUp, delay: (idx * 150) + 200 })
       );
     }
   }, []);
 
   return (
-    <footer className="py-16 px-6">
-      <div className="relative h-full w-full bg-slate-950">
-        <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
-        <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
-
+    <footer id="footer" className="bg-[#513662]">
+      <div className="pt-8 pb-16 px-6 max-content-wrapper">
         <h3
-          className="text-4xl font-bold font-secondary uppercase mb-10 text-center"
+          className="text-4xl font-bold  uppercase mb-7 text-center"
           ref={titleRef}
         >
           Dream Team
         </h3>
-        <ul className="flex flex-wrap gap-4" ref={listRef}>
+        <ul className="flex flex-col items-center gap-5" ref={listRef}>
           {team.map((item, idx) => (
             <li key={idx} className="shrink-0 w-full max-w-[100px] min-w-max">
-              <Card className="p-3 bg-purple-400/30 text-white">
-                <p className="font-bold">{item.role}</p>
-                <p className="font-light">{item.name}</p>
-              </Card>
+              <div className="flex flex-col items-center">
+                <p className="font-thin uppercase tracking-[20%]">
+                  {item.name}
+                </p>
+                <Divider />
+                <p className="font-thin">{item.role}</p>
+              </div>
             </li>
           ))}
         </ul>

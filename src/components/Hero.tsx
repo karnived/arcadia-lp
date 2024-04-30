@@ -1,49 +1,19 @@
-import { useEffect, useRef } from "react";
-import { glitch } from "../utils/glitch";
-import RegisterModal from "./RegisterModal";
-import ScrollIndicator from "./ScrollIndicator";
-import ScrollReveal from "scrollreveal";
-import { slideUp } from "../utils/animations";
+import RegisterForm from "./RegisterForm";
+import Countdown from "./Countdown";
+import { Image } from "@nextui-org/react";
+
+import HeroTitleImage from "../assets/images/hero-title.png";
 
 const Hero = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLHeadingElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    glitch(titleRef.current);
-  }, []);
-
-  useEffect(() => {
-    if (subtitleRef.current) {
-      ScrollReveal().reveal(subtitleRef.current, {
-        ...slideUp,
-        distance: "20px",
-        delay: 700,
-      });
-
-      if (ctaRef.current) {
-        ScrollReveal().reveal(ctaRef.current, { ...slideUp, delay: 900 });
-      }
-    }
-  }, []);
-
   return (
     <section id="hero">
-      <div className="py-80 px-6 grid place-content-center text-center relative">
-        <h1
-          ref={titleRef}
-          data-value="Arcadia"
-          className="text-6xl font-bold font-secondary uppercase"
-        >
-          Arcadia
-        </h1>
-        <h2 className="text-xl font-light mt-2" ref={subtitleRef}>
-          Coming Soon
-        </h2>
+      <div className="bg-[url('../assets/images/hero-background.png')] bg-no-repeat bg-cover">
+        <div className="px-6 py-10 text-center relative min-h-screen max-content-wrapper">
+          <Image src={HeroTitleImage} />
 
-        <ScrollIndicator />
-        <RegisterModal ref={ctaRef} />
+          <RegisterForm />
+          <Countdown targetDate={"2024-05-24"} />
+        </div>
       </div>
     </section>
   );
