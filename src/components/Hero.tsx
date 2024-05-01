@@ -10,7 +10,6 @@ const Hero = () => {
       <div className="bg-[url('../assets/images/hero-background.png')] bg-no-repeat bg-cover">
         <div className="px-6 py-10 text-center relative min-h-screen max-content-wrapper">
           <Image src={HeroTitleImage} />
-
           <RegisterForm />
           <Countdown targetDate={"May 24, 2024 22:30:00"} />
         </div>

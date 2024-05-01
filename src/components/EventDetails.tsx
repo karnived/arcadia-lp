@@ -67,10 +67,10 @@ const EventDetails = () => {
 
           <div
             role="listbox"
-            className="flex flex-col gap-[60px] odd:ml-auto mt-6"
+            className="flex flex-col gap-[52px] odd:ml-auto mt-6"
           >
             <EventDetail title="Tematica" className="uppercase">
-              Alternavida - Retro - Arcade
+              <span className="block mt-2">Alternavida - Retro - Arcade</span>
             </EventDetail>
             <EventDetail title="Musica" className="ml-auto" direction="right">
               <div className="flex gap-3">
@@ -90,17 +90,27 @@ const EventDetails = () => {
               </div>
             </EventDetail>
             <EventDetail title="Lugar y Hora" className="uppercase">
-              La Maité - Sto. Domino 1395 (Y.B) - 23:00hs.
+              <span className="block mt-2">
+                La Maité - Sto. Domino 1395 (Y.B) - 23:00hs.
+              </span>
             </EventDetail>
           </div>
 
-          <div className="absolute top-[31%] right-[20%] w-full max-w-[260px]">
+          <div className="absolute top-[31%] right-[90px] w-full max-w-[260px]">
+            <img src={LineImage} className="w-full" />
+          </div>
+
+          <div className="absolute bottom-[13.5%] left-[78px] w-full max-w-[260px] scale-y-[-1]">
+            <img src={LineImage} className="w-full" />
+          </div>
+
+          {/* <div className="absolute top-[31%] right-[20%] w-full max-w-[260px]">
             <img src={LineImage} className="w-full" />
           </div>
 
           <div className="absolute bottom-[13.5%] left-[19.3%] w-full max-w-[260px] scale-y-[-1]">
             <img src={LineImage} className="w-full" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
