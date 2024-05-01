@@ -4,22 +4,6 @@ import ScrollReveal from "scrollreveal";
 import { calculateTimeLeft } from "../utils/calculateTimeLeft";
 import { slideUp } from "../utils/animations";
 
-type BoxProps = {
-  label: string;
-  value: number;
-};
-
-const Box = ({ label, value }: BoxProps) => {
-  return (
-    <div className="flex-1 flex flex-col items-center justify-center countdown-box-container">
-      <span className="text-sm mb-2 uppercase text-[13px]">{label}</span>
-      <div className="w-[60px] h-[60px] rounded-xl flex justify-center countdown-box">
-        <span className="text-[40px] countdown-value">{value}</span>
-      </div>
-    </div>
-  );
-};
-
 type CountdownProps = {
   targetDate: string | Date;
 };
@@ -54,10 +38,21 @@ export default function Countdown({ targetDate }: CountdownProps) {
           dateTime={targetDate.toLocaleString()}
           ref={listRef}
         >
-          <Box label="Days" value={timeLeft.days} />
-          <Box label="Hours" value={timeLeft.hours} />
-          <Box label="Minutes" value={timeLeft.minutes} />
-          <Box label="Seconds" value={timeLeft.seconds} />
+          {Object.keys(timeLeft).map((interval) => (
+            <div
+              key={interval}
+              className="flex-1 flex flex-col items-center justify-center countdown-box-container"
+            >
+              <span className="text-sm mb-2 uppercase text-[13px]">
+                {interval.charAt(0).toUpperCase() + interval.slice(1)}
+              </span>
+              <div className="w-[60px] h-[60px] rounded-xl flex justify-center countdown-box">
+                <span className="text-[40px] countdown-value">
+                  {timeLeft[interval as keyof typeof timeLeft]}
+                </span>
+              </div>
+            </div>
+          ))}
         </time>
       </div>
     </section>
