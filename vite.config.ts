@@ -2,8 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import Unfonts from "unplugin-fonts/vite";
 
-console.log(process.env)
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [

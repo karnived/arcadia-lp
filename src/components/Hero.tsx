@@ -12,7 +12,7 @@ const Hero = () => {
           <Image src={HeroTitleImage} />
 
           <RegisterForm />
-          <Countdown targetDate={"2024-05-24"} />
+          <Countdown targetDate={"May 24, 2024 22:30:00"} />
         </div>
       </div>
     </section>
