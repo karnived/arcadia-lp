@@ -4,9 +4,9 @@ import { PropsWithChildren, useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
 import { slideLeft, slideRight, slideUp } from "../utils/animations";
 
-import DjImage from "../assets/dj.png";
+import DjProfileImage from "../assets/images/dj-profile.png";
 import TitleImage from "../assets/images/event-details-title.png";
-import LineImage from "../assets/images/line.svg";
+import LinesImage from "../assets/images/event-details-lines.png";
 
 type EventDetailProps = PropsWithChildren & {
   className?: string;
@@ -35,7 +35,7 @@ const EventDetail = ({
     <fieldset
       ref={itemRef}
       className={cn(
-        "border-2 border-[#f35ae5] rounded-xl px-4 pb-2 w-[300px]",
+        "border-2 border-[#f35ae5] rounded-xl px-4 pb-2 w-[265px]",
         className
       )}
     >
@@ -60,32 +60,26 @@ const EventDetails = () => {
     <section id="event-details">
       <div className="relative">
         <div className="event-details-bg"></div>
-        <div className="py-12 px-4 max-content-wrapper relative">
-          <div ref={titleRef}>
+        <div className="py-12 px-4 max-content-wrapper">
+          <div ref={titleRef} className="w-[300px] mx-auto">
             <Image src={TitleImage} />
           </div>
 
           <div
             role="listbox"
-            className="flex flex-col gap-[52px] odd:ml-auto mt-6"
+            className="relative flex flex-col gap-12 odd:ml-auto mt-6"
           >
             <EventDetail title="Tematica" className="uppercase">
               <span className="block mt-2">Alternavida - Retro - Arcade</span>
             </EventDetail>
-            <EventDetail title="Musica" className="ml-auto" direction="right">
+            <EventDetail title="Musica" className="ml-[90px]" direction="right">
               <div className="flex gap-3">
-                <div className="shrink-0">
-                  <Image src={DjImage} />
+                <div className="shrink-0 max-w-[80px]">
+                  <Image src={DjProfileImage} />
                 </div>
                 <div className="flex flex-col">
                   <span className="uppercase">David Deheza</span>
                   <span>Founder of @davidehezadjs</span>
-                  <ul className="list-disc ml-6">
-                    <li className="leading-4">Arcadia</li>
-                    <li className="leading-4">Ella Miami</li>
-                    <li className="leading-4">Shampoo</li>
-                    <li className="leading-4">Las Cañas</li>
-                  </ul>
                 </div>
               </div>
             </EventDetail>
@@ -94,15 +88,19 @@ const EventDetails = () => {
                 La Maité - Sto. Domino 1395 (Y.B) - 23:00hs.
               </span>
             </EventDetail>
+
+            <div className="absolute w-[234px] top-[35px] left-[60px]">
+              <Image src={LinesImage} />
+            </div>
           </div>
 
-          <div className="absolute top-[31%] right-[90px] w-full max-w-[260px]">
+          {/* <div className="absolute top-[31%] right-[90px] w-full max-w-[260px]">
             <img src={LineImage} className="w-full" />
           </div>
 
           <div className="absolute bottom-[13.5%] left-[78px] w-full max-w-[260px] scale-y-[-1]">
             <img src={LineImage} className="w-full" />
-          </div>
+          </div> */}
 
           {/* <div className="absolute top-[31%] right-[20%] w-full max-w-[260px]">
             <img src={LineImage} className="w-full" />
