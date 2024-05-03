@@ -46,7 +46,7 @@ const RegisterForm = () => {
     handleSubmit,
     reset,
     control,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<FormSchemaValues>({
     resolver: zodResolver(formSchema),
     reValidateMode: "onChange",
