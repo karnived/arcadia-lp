@@ -1,0 +1,17 @@
+input::placeholder {
+  color: white;
+}
+
+.input-container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #1d1322 0%, #724d88 47.5%, #724d88 100%);
+  }
+}

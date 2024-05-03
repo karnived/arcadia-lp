@@ -3,7 +3,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@nextui-org/button";
-import { Card, CardBody, CardHeader, useDisclosure } from "@nextui-org/react";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Divider,
+  useDisclosure,
+} from "@nextui-org/react";
 import { createAccount } from "../api/api";
 import SuccessModal from "./SuccessModal";
 import ErrorModal from "./ErrorModal";
@@ -76,19 +82,20 @@ const RegisterForm = () => {
       <SuccessModal onOpenChange={onOpenChange} isOpen={isOpen} />
       <ErrorModal onOpenChange={onOpenChangeError} isOpen={isOpenError} />
 
-      <Card className="custom-transparent-bg ">
-        <CardHeader className="flex items-center justify-center pt-8">
-          <h3 className="text-2xl text-center text-[#EAA5F2] font-bold">
+      <Card className="form-transparent-bg">
+        <CardHeader className="flex items-center justify-center pt-8 pb-0">
+          <h3 className="text-2xl text-center text-[#EAA5F2] font-bold max-w-[297px]">
             Fill in the form to join the event
           </h3>
         </CardHeader>
         <CardBody className="px-4 py-5">
+          <Divider className="bg-white mb-5" />
           <form onSubmit={handleSubmit(handleOnSubmit)} className="space-y-5">
             <Controller
               name="name"
               control={control}
               render={({ field }) => (
-                <div>
+                <div className="input-container">
                   <input
                     {...field}
                     name="name"
@@ -107,7 +114,7 @@ const RegisterForm = () => {
               name="nationalId"
               control={control}
               render={({ field }) => (
-                <div>
+                <div className="input-container">
                   <input
                     {...field}
                     name="nationalId"
@@ -126,7 +133,7 @@ const RegisterForm = () => {
               name="email"
               control={control}
               render={({ field }) => (
-                <div>
+                <div className="input-container">
                   <input
                     {...field}
                     name="email"
@@ -145,7 +152,7 @@ const RegisterForm = () => {
               color="primary"
               type="submit"
               isLoading={isLoading}
-              className="flex mx-auto bg-black rounded-3xl border-1 border-[#FF1BF4] hover:bg-[#FF1BF4] shadow-[0_0_15px_3px_rgba(140,17,140,0.6)]"
+              className="flex mx-auto bg-black rounded-3xl border-1 border-[#FF1BF4] hover:bg-[#FF1BF4] shadow-[0_0_15px_3px_rgba(140,17,140,0.6)] w-[190px]"
             >
               RSVP
             </Button>
