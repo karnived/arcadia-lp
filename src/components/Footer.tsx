@@ -1,33 +1,39 @@
 import { useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
-import { slideUp } from "../utils/animations";
-
+import { ExternalLink } from "lucide-react";
 import LineSeparatorImage from "../assets/images/footer-separator.png";
+import { slideUp } from "../utils/animations";
 
 const team = [
   {
     name: "Nicolas Aybar",
     role: "Event Director",
+    url: "https://calendar.app.google/2re7mVoBowPfYdun6",
   },
   {
     name: "TBA",
     role: "Sound Architect",
+    url: "",
   },
   {
     name: "TBA",
     role: "Atmosphere Creator",
+    url: "",
   },
   {
     name: "Sofia Becerra",
     role: "Creative Styling",
+    url: "https://www.instagram.com/estudio_brutal",
   },
   {
     name: "Fernando Adad",
     role: "Code Wizard",
+    url: "https://ar.linkedin.com/in/fer-adad",
   },
   {
     name: "Clementina Stenvers",
     role: "Visionary Digital Designer",
+    url: " https://stenversdesign.com",
   },
 ];
 
@@ -64,9 +70,17 @@ const Footer = () => {
           {team.map((item, idx) => (
             <li key={idx} className="shrink-0 w-full max-w-[100px] min-w-max">
               <div className="flex flex-col items-center gap-2">
-                <p className="font-thin uppercase tracking-[20%] py-[6px] px-[16px] bg-[#513662] rounded-[33px] shadow-[0_0_9px_0_#231636BF]">
-                  {item.name}
-                </p>
+                <a
+                  href={item.url ?? "#"}
+                  className="group flex items-center cursor-pointer gap-1 py-[6px] px-[16px] bg-[#513662] rounded-[33px] shadow-[0_0_9px_0_#231636BF]"
+                >
+                  <p className="font-thin uppercase tracking-[20%]">
+                    {item.name}
+                  </p>
+                  {item.url && (
+                    <ExternalLink className="h-3 w-0 group-hover:w-3 transition-all" />
+                  )}
+                </a>
                 <img src={LineSeparatorImage} />
                 <p className="font-thin">{item.role}</p>
               </div>
