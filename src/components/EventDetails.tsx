@@ -7,6 +7,7 @@ import { slideLeft, slideRight, slideUp } from "../utils/animations";
 import DjProfileImage from "../assets/images/dj-profile.png";
 import TitleImage from "../assets/images/event-details-title.png";
 import LinesImage from "../assets/images/event-details-lines.png";
+import PlaceImage from "../assets/images/event-details-place.png";
 
 type EventDetailProps = PropsWithChildren & {
   className?: string;
@@ -61,32 +62,41 @@ const EventDetails = () => {
       <div className="relative">
         <div className="event-details-bg"></div>
         <div className="py-12 px-4 max-content-wrapper">
-          <div ref={titleRef} className="w-[300px] mx-auto">
+          <div ref={titleRef} className="w-[290px] mx-auto">
             <Image src={TitleImage} />
           </div>
 
           <div
             role="listbox"
-            className="relative flex flex-col gap-12 odd:ml-auto mt-6"
+            className="relative flex flex-col gap-12 mx-auto odd:ml-auto mt-6 w-[328px]"
           >
-            <EventDetail title="Tematica" className="uppercase">
-              <span className="block mt-2">Alternavida - Retro - Arcade</span>
+            <EventDetail title="Theme" className="uppercase">
+              <span className="block mt-2">Alternativa - Retro - Arcade</span>
             </EventDetail>
-            <EventDetail title="Musica" className="ml-[90px]" direction="right">
+            <EventDetail title="Music" className="ml-[90px]" direction="right">
               <div className="flex gap-3">
                 <div className="shrink-0 max-w-[80px]">
                   <Image src={DjProfileImage} />
                 </div>
                 <div className="flex flex-col">
-                  <span className="uppercase">David Deheza</span>
+                  <strong className="uppercase">David Deheza</strong>
                   <span>Founder of @davidehezadjs</span>
                 </div>
               </div>
             </EventDetail>
-            <EventDetail title="Lugar y Hora" className="uppercase">
-              <span className="block mt-2">
-                La Maité - Sto. Domino 1395 (Y.B) - 23:00hs.
-              </span>
+            <EventDetail title="Where|When">
+              <div className="flex gap-3">
+                <div className="shrink-0 max-w-[80px]">
+                  <Image src={PlaceImage} />
+                </div>
+                <span className="block mt-2">
+                  <strong>La Maité Eventos</strong>
+                  <br />
+                  Sto. Domino 1395
+                  <br />
+                  23:00hs.
+                </span>
+              </div>
             </EventDetail>
 
             <div className="absolute w-[234px] top-[35px] left-[60px]">

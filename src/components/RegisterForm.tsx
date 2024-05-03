@@ -72,7 +72,7 @@ const RegisterForm = () => {
       <Card className="custom-transparent-bg ">
         <CardHeader className="flex items-center justify-center pt-8">
           <h3 className="text-2xl text-center text-[#EAA5F2] font-bold">
-            Completa el formulario para ser parte del evento
+            Fill in the form to join the event
           </h3>
         </CardHeader>
         <CardBody className="px-4 py-5">
@@ -85,7 +85,7 @@ const RegisterForm = () => {
                   <input
                     {...field}
                     name="name"
-                    placeholder="Nombre"
+                    placeholder="Full name"
                     className="bg-[#231636] px-3 py-[14px] rounded-sm w-full text-white"
                   />
 
@@ -141,7 +141,7 @@ const RegisterForm = () => {
               isLoading={isLoading}
               className="flex mx-auto bg-black rounded-3xl border-1 border-[#FF1BF4] hover:bg-[#FF1BF4]"
             >
-              Confirmar asistencia
+              RSVP
             </Button>
           </form>
         </CardBody>
