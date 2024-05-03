@@ -7,27 +7,27 @@ import LineSeparatorImage from "../assets/images/footer-separator.png";
 const team = [
   {
     name: "Nicolas Aybar",
-    role: "Organización",
+    role: "Event Director",
   },
   {
-    name: "David Deheza",
-    role: "Música",
+    name: "TBA",
+    role: "Sound Architect",
   },
   {
-    name: "JC Producción de Eventos",
-    role: "Producción",
+    name: "TBA",
+    role: "Atmosphere Creator",
   },
   {
     name: "Sofia Becerra",
-    role: "Estilismo",
+    role: "Creative Styling",
   },
   {
     name: "Fernando Adad",
-    role: "Frontend Engineer",
+    role: "Code Wizard",
   },
   {
     name: "Clementina Stenvers",
-    role: "UX/UI Design",
+    role: "Visionary Digital Designer",
   },
 ];
 
@@ -58,7 +58,7 @@ const Footer = () => {
           className="text-4xl font-bold uppercase mb-10 text-center"
           ref={titleRef}
         >
-          Dream Team
+          Ultimate Lineup
         </h3>
         <ul className="flex flex-col items-center gap-7" ref={listRef}>
           {team.map((item, idx) => (
