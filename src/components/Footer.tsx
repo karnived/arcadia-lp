@@ -48,8 +48,12 @@ const Footer = () => {
 
     if (listRef.current) {
       const items = listRef.current.childNodes as NodeListOf<HTMLElement>;
+
       items.forEach((item, idx) =>
-        ScrollReveal().reveal(item, { ...slideUp, delay: idx * 150 + 200 })
+        ScrollReveal().reveal(item, {
+          ...slideUp,
+          delay: idx * 150,
+        })
       );
     }
   }, []);
@@ -59,7 +63,7 @@ const Footer = () => {
       id="footer"
       className="bg-gradient-to-b from-[#392048] to-[#4C305D]"
     >
-      <div className="py-16 px-6 max-content-wrapper">
+      <div className="py-16 pt-[24vw] md:pt-[20vw] px-6 max-content-wrapper">
         <h3
           className="text-4xl font-bold uppercase mb-10 text-center"
           ref={titleRef}
@@ -78,7 +82,7 @@ const Footer = () => {
                     {item.name}
                   </p>
                   {item.url && (
-                    <ExternalLink className="h-3 w-0 group-hover:w-3 transition-all" />
+                    <ExternalLink className="h-3 w-0 group-hover:w-3 group-focus:w-3 transition-all" />
                   )}
                 </a>
                 <img src={LineSeparatorImage} />

@@ -57,8 +57,7 @@ const EventDetails = () => {
 
   return (
     <section id="event-details">
-      <div className="relative">
-        <div className="event-details-bg"></div>
+      <div className="relative bg-gradient-to-b from-[#09080e] to-[#652287]">
         <div className="py-12 px-4 max-content-wrapper">
           <div ref={titleRef} className="w-[290px] mx-auto">
             <Image src={TitleImage} />
@@ -86,6 +85,18 @@ const EventDetails = () => {
               <Image src={LinesImage} />
             </div>
           </div>
+        </div>
+
+        <div className="absolute top-[100%] left-0 right-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path
+                fill="#652287"
+                fill-opacity="1"
+                d="M0,64L48,90.7C96,117,192,171,288,165.3C384,160,480,96,576,69.3C672,43,768,53,864,90.7C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+              ></path>
+            </svg>
+          </svg>
         </div>
       </div>
     </section>

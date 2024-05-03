@@ -152,7 +152,7 @@ const RegisterForm = () => {
               color="primary"
               type="submit"
               isLoading={isLoading}
-              className="flex mx-auto bg-black rounded-3xl border-1 border-[#FF1BF4] hover:bg-[#FF1BF4] shadow-[0_0_15px_3px_rgba(140,17,140,0.6)] w-[190px]"
+              className="flex mx-auto bg-black rounded-3xl border-1 border-[#FF1BF4] hover:bg-[#FF1BF4] focus:bg-[#FF1BF4] shadow-[0_0_15px_3px_rgba(140,17,140,0.6)] w-[190px]"
             >
               RSVP
             </Button>
