@@ -1,6 +1,5 @@
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import MemeUpload from "./components/MemeUpload";
 import EventDetails from "./components/EventDetails";
 import ScrollProgress from "./components/ScrollProgress";
 
@@ -10,7 +9,6 @@ function App() {
       <ScrollProgress />
       <Hero />
       <EventDetails />
-      {/* <MemeUpload /> */}
       <Footer />
     </main>
   );
