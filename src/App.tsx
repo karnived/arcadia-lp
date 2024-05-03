@@ -10,7 +10,7 @@ function App() {
       <ScrollProgress />
       <Hero />
       <EventDetails />
-      <MemeUpload />
+      {/* <MemeUpload /> */}
       <Footer />
     </main>
   );
