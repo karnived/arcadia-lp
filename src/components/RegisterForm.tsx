@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
@@ -5,7 +6,7 @@ import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardHeader, useDisclosure } from "@nextui-org/react";
 import { createAccount } from "../api/api";
 import SuccessModal from "./SuccessModal";
-import { useState } from "react";
+import ErrorModal from "./ErrorModal";
 
 const formSchema = z
   .object({
@@ -29,6 +30,11 @@ type FormSchemaValues = z.infer<typeof formSchema>;
 const RegisterForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const {
+    isOpen: isOpenError,
+    onOpen: onOpenError,
+    onOpenChange: onOpenChangeError,
+  } = useDisclosure();
 
   const {
     handleSubmit,
@@ -55,20 +61,21 @@ const RegisterForm = () => {
       setIsLoading(true);
       const response = await createAccount(data);
 
-      if (response.result.insertedId) {
-        onOpen();
-        reset();
-      }
+      if (response.result.insertedId) onOpen();
     } catch (error) {
       console.error("Error trying to create an account: ", error);
+      onOpenError();
     } finally {
       setIsLoading(false);
+      reset();
     }
   };
 
   return (
     <div className="mb-[50px]">
       <SuccessModal onOpenChange={onOpenChange} isOpen={isOpen} />
+      <ErrorModal onOpenChange={onOpenChangeError} isOpen={isOpenError} />
+
       <Card className="custom-transparent-bg ">
         <CardHeader className="flex items-center justify-center pt-8">
           <h3 className="text-2xl text-center text-[#EAA5F2] font-bold">
