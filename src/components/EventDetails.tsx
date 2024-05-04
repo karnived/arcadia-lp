@@ -34,7 +34,7 @@ const EventDetail = ({
     <fieldset
       ref={itemRef}
       className={cn(
-        "border-2 border-[#f35ae5] rounded-xl px-4 pb-2 w-[265px]",
+        "border-2 border-[#f35ae5] rounded-xl px-4 pb-2 max-w-[265px]",
         className
       )}
     >
