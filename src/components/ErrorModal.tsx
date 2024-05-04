@@ -18,13 +18,12 @@ const ErrorModal = ({ isOpen, onOpenChange }: ErrorModalProps) => {
           <img src={SuccessImage} className="w-[110px]" />
           <div className="text-center">
             <h3 className="text-[22px] font-bold text-[#FF5151] mb-[25px]">
-              Algo salió mal
+               Something went wrong.
             </h3>
             <p>
-              Something went wrong.
               <br />
-              We encountered an error while loading your form. Please register
-              again.
+              We encountered an error while loading your form. 
+        <br />Please register again.
             </p>
           </div>
         </ModalBody>
