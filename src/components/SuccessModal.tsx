@@ -18,7 +18,7 @@ const SuccessModal = ({ isOpen, onOpenChange }: SuccessModalProps) => {
           <img src={SuccessImage} className="w-[110px]" />
           <div className="text-center">
             <h3 className="text-[22px] font-bold text-[#EAA5F2] mb-[25px]">
-              ¡Ya sos parte de Arcadia!
+              You're now part of Arcadia!
             </h3>
             <p>
               In the coming days, we'll be revealing information about the
