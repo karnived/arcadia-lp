@@ -21,9 +21,10 @@ const ErrorModal = ({ isOpen, onOpenChange }: ErrorModalProps) => {
               Algo salió mal
             </h3>
             <p>
-              Tuvimos un error al cargar tu formulario.
+              Something went wrong.
               <br />
-              Por favor registrate nuevamente
+              We encountered an error while loading your form. Please register
+              again.
             </p>
           </div>
         </ModalBody>

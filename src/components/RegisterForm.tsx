@@ -17,17 +17,17 @@ import ErrorModal from "./ErrorModal";
 const formSchema = z
   .object({
     email: z
-      .string({ required_error: "Este campo es requerido" })
-      .email("El mail ingresado no es válido"),
+      .string({ required_error: "This field is required" })
+      .email("Email is not valid"),
     nationalId: z
-      .string({ required_error: "Este campo es requerido" })
-      .length(8, "El DNI ingresado no es válido")
+      .string({ required_error: "This field is required" })
+      .length(8, "Must be 8 characters long")
       .refine((value) => {
         return !isNaN(Number(value)) && value?.length > 3;
-      }, "El DNI ingresado no es válido"),
+      }, "DNI is not valid"),
     name: z
-      .string({ required_error: "Este campo es requerido" })
-      .min(3, "Este campo require al menos 3 caractéres"),
+      .string({ required_error: "This field is required" })
+      .min(3, "This field requires at leas 3 characters long"),
   })
   .required();
 

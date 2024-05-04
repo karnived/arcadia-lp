@@ -21,9 +21,10 @@ const SuccessModal = ({ isOpen, onOpenChange }: SuccessModalProps) => {
               ¡Ya sos parte de Arcadia!
             </h3>
             <p>
-              En los próximos días vamos a ir revelando info sobre el evento.
+              In the coming days, we'll be revealing information about the
+              event.
               <br />
-              Mantenete conectado desde la app para no perderte nada!
+              Stay connected through the app to not miss anything!
             </p>
           </div>
         </ModalBody>
