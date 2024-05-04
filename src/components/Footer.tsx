@@ -65,7 +65,7 @@ const Footer = () => {
     >
       <div className="py-16 pt-[24vw] md:pt-[20vw] px-6 max-content-wrapper">
         <h3
-          className="text-4xl font-bold uppercase mb-10 text-center"
+          className="text-[18px] font-bold uppercase mb-10 text-center"
           ref={titleRef}
         >
           Ultimate Lineup
@@ -78,7 +78,7 @@ const Footer = () => {
                   href={item.url ?? "#"}
                   className="group flex items-center cursor-pointer gap-1 py-[6px] px-[16px] bg-[#513662] rounded-[33px] shadow-[0_0_9px_0_#231636BF]"
                 >
-                  <p className="font-thin uppercase tracking-[20%]">
+                  <p className="font-thin uppercase tracking-[20%] text-[14px]">
                     {item.name}
                   </p>
                   {item.url && (
@@ -86,7 +86,7 @@ const Footer = () => {
                   )}
                 </a>
                 <img src={LineSeparatorImage} />
-                <p className="font-thin">{item.role}</p>
+                <p className="font-thin text-[12px]">{item.role}</p>
               </div>
             </li>
           ))}

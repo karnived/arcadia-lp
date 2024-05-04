@@ -9,7 +9,8 @@ const ErrorModal = ({ isOpen, onOpenChange }: ErrorModalProps) => {
     <Modal
       isOpen={isOpen}
       onOpenChange={onOpenChange}
-      className="max-w-[327px]"
+      size="xs"
+      placement="center"
       backdrop="blur"
     >
       <ModalContent className="bg-[linear-gradient(222.78deg, rgba(0, 0, 0, 0.252) -2.19%, rgba(0, 0, 0, 0.084) 104.72%)] border-1 border-[#7E3F88]">
