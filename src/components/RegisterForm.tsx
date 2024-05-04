@@ -95,18 +95,19 @@ const RegisterForm = () => {
               name="name"
               control={control}
               render={({ field }) => (
-                <div className="input-container">
-                  <input
-                    {...field}
-                    name="name"
-                    placeholder="Full name"
-                    className="bg-[#231636] px-3 py-[14px] rounded-sm w-full text-white"
-                  />
-
+                <>
+                  <div className="input-container">
+                    <input
+                      {...field}
+                      name="name"
+                      placeholder="Full name"
+                      className="bg-[#231636] px-3 py-[14px] rounded-sm w-full text-white"
+                    />
+                  </div>
                   <p className="text-red-500 text-xs mt-2 ml-1">
                     {errors.name?.message}
                   </p>
-                </div>
+                </>
               )}
             />
 
@@ -114,18 +115,19 @@ const RegisterForm = () => {
               name="nationalId"
               control={control}
               render={({ field }) => (
-                <div className="input-container">
-                  <input
-                    {...field}
-                    name="nationalId"
-                    placeholder="DNI"
-                    className="bg-[#231636] px-3 py-[14px] rounded-sm w-full text-white"
-                  />
-
+                <>
+                  <div className="input-container">
+                    <input
+                      {...field}
+                      name="nationalId"
+                      placeholder="DNI"
+                      className="bg-[#231636] px-3 py-[14px] rounded-sm w-full text-white"
+                    />
+                  </div>
                   <p className="text-red-500 text-xs mt-2 ml-1">
                     {errors.nationalId?.message}
                   </p>
-                </div>
+                </>
               )}
             />
 
@@ -133,18 +135,19 @@ const RegisterForm = () => {
               name="email"
               control={control}
               render={({ field }) => (
-                <div className="input-container">
-                  <input
-                    {...field}
-                    name="email"
-                    placeholder="Email"
-                    className="bg-[#231636] px-3 py-[14px] rounded-sm w-full text-white"
-                  />
-
+                <>
+                  <div className="input-container">
+                    <input
+                      {...field}
+                      name="email"
+                      placeholder="Email"
+                      className="bg-[#231636] px-3 py-[14px] rounded-sm w-full text-white"
+                    />
+                  </div>
                   <p className="text-red-500 text-xs mt-2 ml-1">
                     {errors.email?.message}
                   </p>
-                </div>
+                </>
               )}
             />
 
