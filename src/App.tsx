@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import EventDetails from "./components/EventDetails";
 import ScrollProgress from "./components/ScrollProgress";
+import MemeUpload from "./components/MemeUpload";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <ScrollProgress />
       <Hero />
       <EventDetails />
+      <MemeUpload />
       <Footer />
     </main>
   );

@@ -63,7 +63,7 @@ const Footer = () => {
       id="footer"
       className="bg-gradient-to-b from-[#392048] to-[#4C305D]"
     >
-      <div className="py-16 pt-[24vw] md:pt-[20vw] px-6 max-content-wrapper">
+      <div className="py-16 pt-24  px-6 max-content-wrapper">
         <h3
           className="text-[18px] font-bold uppercase mb-10 text-center"
           ref={titleRef}

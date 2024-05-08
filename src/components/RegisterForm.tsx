@@ -11,8 +11,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { createAccount } from "../api/api";
-import SuccessModal from "./SuccessModal";
-import ErrorModal from "./ErrorModal";
+import AlertModal from "./AlertModal";
 
 const formSchema = z
   .object({
@@ -79,10 +78,21 @@ const RegisterForm = () => {
 
   return (
     <div className="mb-[50px]">
-      <SuccessModal onOpenChange={onOpenChange} isOpen={isOpen} />
-      <ErrorModal onOpenChange={onOpenChangeError} isOpen={isOpenError} />
+      <AlertModal
+        type="success"
+        title="You're now part of Arcadia!"
+        description=" In the coming days, we'll be revealing information about the event. Stay connected through the app to not miss anything!"
+        onOpenChange={onOpenChange}
+        isOpen={isOpen}
+      />
+      <AlertModal
+        type="error"
+        description="We encountered an error while loading your form. Please register again."
+        onOpenChange={onOpenChangeError}
+        isOpen={isOpenError}
+      />
 
-      <Card className="form-transparent-bg">
+      <Card className="transparent-bg">
         <CardHeader className="flex items-center justify-center pt-8 pb-0">
           <h3 className="text-2xl text-center text-[#EAA5F2] font-bold max-w-[297px]">
             Fill in the form to join the event
