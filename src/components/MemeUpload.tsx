@@ -16,8 +16,10 @@ import TitleImage from "../assets/images/meme-title.png";
 import { upload } from "../api/api";
 import AlertModal from "./AlertModal";
 
-// MB / KB / BYTES
-const getMaxSize = (n: number) => n * 1024 * 1024;
+const MAX_FILES_UNITS = 5;
+
+const getMaxSize = (n: number) => n * 1024 * 1024; // MB / KB / BYTES
+
 const convertBytesToMB = (bytes: number) => {
   const mb = bytes / (1024 * 1024);
   return mb.toFixed(2) + " MB";
@@ -68,7 +70,7 @@ const MemeUpload = () => {
       (prev) =>
         new Set([
           ...prev,
-          ...Array.from(files).filter((file) => file.size <= getMaxSize(4)),
+          ...Array.from(files).filter((file) => file.size <= getMaxSize(4)).slice(0, MAX_FILES_UNITS),
         ])
     );
   };
@@ -162,7 +164,9 @@ const MemeUpload = () => {
                 </span>
               </Button>
               <p className="text-xs text-center mt-2 text-gray-500">
-                Maximum file size: 5MB - JPG / PNG / GIF
+                Maximum file size: 5MB
+                <br />
+                Up to 5 image files
               </p>
             </CardBody>
           </Card>
