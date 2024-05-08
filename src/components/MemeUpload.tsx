@@ -151,7 +151,7 @@ const MemeUpload = () => {
               <Button
                 onPress={handleOnInput}
                 color="primary"
-                className="max-w-[188px] self-center bg-black rounded-3xl border-1 border-[#FF1BF4] hover:bg-[#FF1BF4]"
+                className="max-w-[188px] self-center bg-black rounded-3xl border-1 border-[#FF1BF4] hover:bg-[#FF1BF4] active:bg-[#FF1BF4] shadow-[0_0_15px_3px_rgba(140,17,140,0.6)]"
                 isDisabled={isLoading}
               >
                 <UploadCloud className="w-4 h-4" />
