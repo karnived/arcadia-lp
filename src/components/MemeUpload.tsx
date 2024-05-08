@@ -136,6 +136,7 @@ const MemeUpload = () => {
                           placeholder={file.name}
                           isDisabled
                           description={convertBytesToMB(file.size)}
+                          multiple
                         />
                         <div className="absolute right-1 top-1">
                           <button onClick={() => handleRemoveFile(file)}>
