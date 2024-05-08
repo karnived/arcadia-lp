@@ -118,10 +118,12 @@ const MemeUpload = () => {
               <input
                 ref={inputRef}
                 id="upload"
+                name="upload-file"
                 type="file"
                 className="hidden"
                 aria-hidden="true"
-                accept="image/png, image/jpeg, image/webp, image/gif"
+                accept="image/*"
+                multiple
                 onChange={handleOnChange}
               />
 
@@ -136,7 +138,6 @@ const MemeUpload = () => {
                           placeholder={file.name}
                           isDisabled
                           description={convertBytesToMB(file.size)}
-                          multiple
                         />
                         <div className="absolute right-1 top-1">
                           <button onClick={() => handleRemoveFile(file)}>
