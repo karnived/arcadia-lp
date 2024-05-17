@@ -11,9 +11,9 @@ const team = [
     url: "https://calendar.app.google/2re7mVoBowPfYdun6",
   },
   {
-    name: "TBA",
+    name: "David Deheza",
     role: "Sound Architect",
-    url: "",
+    url: "https://www.instagram.com/davidehezadjs",
   },
   {
     name: "TBA",
@@ -21,7 +21,7 @@ const team = [
     url: "",
   },
   {
-    name: "Sofia Becerra",
+    name: "Estudio Brutal",
     role: "Creative Styling",
     url: "https://www.instagram.com/estudio_brutal",
   },

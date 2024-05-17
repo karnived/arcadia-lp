@@ -5,7 +5,8 @@ import ScrollReveal from "scrollreveal";
 import { slideLeft, slideRight, slideUp } from "../utils/animations";
 
 import TitleImage from "../assets/images/event-details-title.png";
-import LinesImage from "../assets/images/event-details-lines-short.png";
+import LinesImage from "../assets/images/event-details-lines.png";
+import ProfileImage from "../assets/images/dj-profile.png";
 
 type EventDetailProps = PropsWithChildren & {
   className?: string;
@@ -65,23 +66,31 @@ const EventDetails = () => {
 
           <div
             role="listbox"
-            className="relative flex flex-col gap-[74px] mx-auto odd:ml-auto mt-6 w-[328px]"
+            className="relative flex flex-col gap-[47px] mx-auto odd:ml-auto mt-6 w-[328px]"
           >
             <EventDetail title="Theme" className="uppercase">
               <p>Alternativa - Retro - Arcade</p>
             </EventDetail>
-            <EventDetail
-              title="Music"
-              className="ml-[90px] uppercase"
-              direction="right"
-            >
-              <p>Loading...</p>
+            <EventDetail title="Music" className="ml-[90px]" direction="right">
+              <div className="flex gap-[18px]">
+                <Image
+                  src={ProfileImage}
+                  className="w-[77px] aspect-ratio-square flex-shrink-0"
+                />
+                <p>
+                  DAVID DEHEZA
+                  <br />
+                  Founder of
+                  <br />
+                  @davidehezadjs
+                </p>
+              </div>
             </EventDetail>
             <EventDetail title="Where|When" className="uppercase">
               <p>Loading...</p>
             </EventDetail>
 
-            <div className="absolute w-[234px] top-[25px] left-[60px]">
+            <div className="absolute w-[234px] top-[21px] left-[60px]">
               <Image src={LinesImage} />
             </div>
           </div>
