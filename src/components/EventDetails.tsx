@@ -7,6 +7,7 @@ import { slideLeft, slideRight, slideUp } from "../utils/animations";
 import TitleImage from "../assets/images/event-details-title.png";
 import LinesImage from "../assets/images/event-details-lines.png";
 import ProfileImage from "../assets/images/dj-profile.png";
+import EventImage from "../assets/images/event-details-place.png";
 
 type EventDetailProps = PropsWithChildren & {
   className?: string;
@@ -72,7 +73,7 @@ const EventDetails = () => {
               <p>Alternativa - Retro - Arcade</p>
             </EventDetail>
             <EventDetail title="Music" className="ml-[90px]" direction="right">
-              <div className="flex gap-[18px]">
+              <div className="flex gap-[18px] mt-1">
                 <Image
                   src={ProfileImage}
                   className="w-[77px] aspect-ratio-square flex-shrink-0"
@@ -86,8 +87,20 @@ const EventDetails = () => {
                 </p>
               </div>
             </EventDetail>
-            <EventDetail title="Where|When" className="uppercase">
-              <p>Loading...</p>
+            <EventDetail title="Where|When">
+              <div className="flex gap-[18px] mt-1">
+                <Image
+                  src={EventImage}
+                  className="w-[77px] aspect-ratio-square flex-shrink-0"
+                />
+                <p>
+                  LAMAITE EVENTOS
+                  <br />
+                  Sto. Domingo 1395
+                  <br />
+                  23:00hs.
+                </p>
+              </div>
             </EventDetail>
 
             <div className="absolute w-[234px] top-[21px] left-[60px]">

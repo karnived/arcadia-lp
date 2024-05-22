@@ -16,9 +16,9 @@ const team = [
     url: "https://www.instagram.com/davidehezadjs",
   },
   {
-    name: "TBA",
+    name: "JC Producción de Eventos ",
     role: "Atmosphere Creator",
-    url: "",
+    url: "https://www.instagram.com/eventos.jc.produccion",
   },
   {
     name: "Estudio Brutal",
