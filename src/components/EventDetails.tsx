@@ -36,7 +36,7 @@ const EventDetail = ({
     <fieldset
       ref={itemRef}
       className={cn(
-        "border-2 border-[#f35ae5] rounded-xl px-4 pb-2 max-w-[265px]",
+        "border-2 border-[#f35ae5] rounded-xl px-4 pb-2 max-w-[275px]",
         className
       )}
     >
@@ -70,7 +70,7 @@ const EventDetails = () => {
             className="relative flex flex-col gap-[47px] mx-auto odd:ml-auto mt-6 w-[328px]"
           >
             <EventDetail title="Theme" className="uppercase">
-              <p>Alternativa - Retro - Arcade</p>
+              <p className="text-[15px]">Alternativa - Retro - Arcade</p>
             </EventDetail>
             <EventDetail title="Music" className="ml-[90px]" direction="right">
               <div className="flex gap-[18px] mt-1">
@@ -78,8 +78,8 @@ const EventDetails = () => {
                   src={ProfileImage}
                   className="w-[77px] aspect-ratio-square flex-shrink-0"
                 />
-                <p>
-                  DAVID DEHEZA
+                <p className="text-[15px]">
+                  <strong>DAVID DEHEZA</strong>
                   <br />
                   Founder of
                   <br />
@@ -87,18 +87,18 @@ const EventDetails = () => {
                 </p>
               </div>
             </EventDetail>
-            <EventDetail title="Where|When">
-              <div className="flex gap-[18px] mt-1">
+            <EventDetail title="Where|When" className="pr-2">
+              <div className="flex gap-[18px] mt-2">
                 <Image
                   src={EventImage}
                   className="w-[77px] aspect-ratio-square flex-shrink-0"
                 />
-                <p>
-                  LAMAITE EVENTOS
+                <p className="text-[15px]">
+                  <strong>LAMAITE EVENTOS</strong>
                   <br />
-                  Sto. Domingo 1395
+                  Sto. Domingo 1395 | YB
                   <br />
-                  23:00hs.
+                  22:30HS - 05:00HS
                 </p>
               </div>
             </EventDetail>
