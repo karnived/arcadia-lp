@@ -8,17 +8,12 @@ const team = [
   {
     name: "Nicolas Aybar",
     role: "Event Director",
-    url: "https://calendar.app.google/2re7mVoBowPfYdun6",
+    url: "https://www.instagram.com/__zniko/",
   },
   {
     name: "David Deheza",
     role: "Sound Architect",
     url: "https://www.instagram.com/davidehezadjs",
-  },
-  {
-    name: "JC Producción de Eventos ",
-    role: "Atmosphere Creator",
-    url: "https://www.instagram.com/eventos.jc.produccion",
   },
   {
     name: "Estudio Brutal",
@@ -33,7 +28,7 @@ const team = [
   {
     name: "Clementina Stenvers",
     role: "Visionary Digital Designer",
-    url: " https://stenversdesign.com",
+    url: "https://hiclem.art/",
   },
 ];
 
