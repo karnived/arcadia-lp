@@ -71,6 +71,7 @@ const Footer = () => {
               <div className="flex flex-col items-center gap-2">
                 <a
                   href={item.url ?? "#"}
+                  target="_blank"
                   className="group flex items-center cursor-pointer gap-1 py-[6px] px-[16px] bg-[#513662] rounded-[33px] shadow-[0_0_9px_0_#231636BF]"
                 >
                   <p className="font-thin uppercase tracking-[20%] text-[14px]">
